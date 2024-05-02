@@ -1,4 +1,6 @@
 import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.event.*;
 public class App {
     public static void main(String[] args) throws Exception {
     
@@ -18,9 +20,13 @@ public class App {
     }
 
     //Question 1:Image of triangle answer with text box. The question is find X. The answer for x will be the X button that closes the program.
-    JOptionPane.showMessageDialog(null, "QUestion 1 starts here");
-
-
+   int question1 = Integer.parseInt (JOptionPane.showInputDialog(null, " Find X for the equation: -144x + 864 +6x^2 = 0"));
+ if(question1 == -1){
+    JOptionPane.showMessageDialog(null, " yeah");
+ }
+ else{
+    JOptionPane.showMessageDialog(null, "try again");
+ }
 }//end of main method
 }//end of App class
 
