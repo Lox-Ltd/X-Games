@@ -1,11 +1,15 @@
 import javax.swing.JOptionPane;
-import javax.swing.*;
-import java.awt.event.*;
 public class App {
     public static void main(String[] args) throws Exception {
     
-    boolean goodRun = true;
+        while(quiz.startQuiz()){}
+        
+        
+    }//end of main method
+}//end of App class
 
+
+    /*
     //Welcome message
     JOptionPane.showMessageDialog(null, "WELCOME TO X GAMES!!!!");
     
@@ -20,18 +24,15 @@ public class App {
     }
 
     //Question 1:Image of triangle answer with text box. The question is find X. The answer for x will be the X button that closes the program.
-   int question1 = Integer.parseInt (JOptionPane.showInputDialog(null, " Find X for the equation: -144x + 864 +6x^2 = 0"));
- if(question1 == -1){
+    int question1 = Integer.parseInt (JOptionPane.showInputDialog(null, " Find X for the equation: -144x + 864 +6x^2 = 0"));
+    if(question1 == -1){
     JOptionPane.showMessageDialog(null, " yeah");
- }
- else{
+    }
+    else{
     JOptionPane.showMessageDialog(null, "try again");
- }
+    }
+    */
 
-//question 2 paragprah will be shown and you will 3 options yes no or cancel. Answer will be to find the error that will spell out as one of the options.
-// question 3 Like a bad haircut from your childhood, this is given to you without your consent. What am I?
-}//end of main method
-}//end of App class
 
 
 //question 2
