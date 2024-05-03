@@ -27,6 +27,9 @@ public class App {
  else{
     JOptionPane.showMessageDialog(null, "try again");
  }
+
+//question 2 paragprah will be shown and you will 3 options yes no or cancel. Answer will be to find the error that will spell out as one of the options.
+// question 3 Like a bad haircut from your childhood, this is given to you without your consent. What am I?
 }//end of main method
 }//end of App class
 
