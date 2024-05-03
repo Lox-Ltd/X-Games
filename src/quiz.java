@@ -3,6 +3,9 @@ import javax.swing.JOptionPane;
 public class quiz {
     public static Boolean startQuiz(){
         JOptionPane.showMessageDialog(null, "WELCOME TO X GAMES!!!!");
+
+        //asking for name
+        String name = JOptionPane.showInputDialog(null, "what is your name");
     
         //Question 0: Specific password
         String password = JOptionPane.showInputDialog( "Please enter your password");
@@ -27,7 +30,15 @@ public class quiz {
             JOptionPane.showMessageDialog(null, "try again");
             return true;
         }
-
+        int answer = JOptionPane.showConfirmDialog(null, "your mom" , "Question 2", JOptionPane.YES_NO_CANCEL_OPTION);
+        if(answer == 2){
+            JOptionPane.showMessageDialog(null,"damn you are actually somewhat smart");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Is your brain mushy try again");
+            return true;
+        }
+        
         //If they manage to complete the whole quiz, return false so they don't have to start again
         return false;
     }
