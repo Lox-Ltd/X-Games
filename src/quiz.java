@@ -21,15 +21,14 @@ public class quiz {
         }
 
         //Question 1:Image of triangle answer with text box. The question is find X. The answer for x will be the X button that closes the program.
-        int question1 = Integer.parseInt (JOptionPane.showInputDialog(null, " Find X for the equation: -144x + 864 +6x^2 = 0"));
+        String question1 = JOptionPane.showInputDialog(null, " Find X for the equation: -144x + 864 +6x^2 = 0");
 
-        if(question1 == -1){
-            JOptionPane.showMessageDialog(null, " yeah");
-        }
-        else{
-            JOptionPane.showMessageDialog(null, "try again");
+        if((question1 != null) && (question1.length() >= 0)){
+            JOptionPane.showMessageDialog(null, "Wrong, try again");
             return true;
         }
+
+        // Question 2: Word Vomit with answer
         int answer = JOptionPane.showConfirmDialog(null, "your mom" , "Question 2", JOptionPane.YES_NO_CANCEL_OPTION);
         if(answer == 2){
             JOptionPane.showMessageDialog(null,"damn you are actually somewhat smart");
