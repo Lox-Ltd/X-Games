@@ -29,15 +29,34 @@ public class quiz {
         }
 
         // Question 2: Word Vomit with answer
-        int answer = JOptionPane.showConfirmDialog(null, "your mom" , "Question 2", JOptionPane.YES_NO_CANCEL_OPTION);
-        if(answer == 2){
+        int question2 = JOptionPane.showConfirmDialog(null, "\"The weather a today was quite plesnt, with clar skies and a getle breeze.\n Everyone was out in the park, chidren playing feth and dogs running freely. \n It seemed like the perfect day  to relax and enjoy the outdoors without any worries." + //
+                        "\"\n" + //
+                        "\n" + //
+                        "" , "Question 2", JOptionPane.YES_NO_CANCEL_OPTION);
+        if(question2 == 2){
             JOptionPane.showMessageDialog(null,"damn you are actually somewhat smart");
         }
         else{
             JOptionPane.showMessageDialog(null, "Is your brain mushy try again");
             return true;
         }
-        
+        String question3 = JOptionPane.showInputDialog(null, "Like a bad haircut from your childhood, this is given to you without your consent. What am I?");
+        if(question3.equals(name)){
+            JOptionPane.showMessageDialog(null, " YEAHHHH YOU COMPLETED THE QUIZZZ");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Is your brain mushy try again");
+            return true;
+        }
+        int question4 = JOptionPane.showConfirmDialog(null, "did you have fun", "question4", JOptionPane.YES_NO_OPTION);
+
+        if(question4 == 0){
+            JOptionPane.showMessageDialog(null, "Congratulations you have one the x games");
+
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Whoops there buddy you messed up try again!!");
+        }
         //If they manage to complete the whole quiz, return false so they don't have to start again
         return false;
     }
