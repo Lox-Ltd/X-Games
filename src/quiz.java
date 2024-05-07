@@ -29,7 +29,7 @@ public class quiz {
         }
 
         // Question 2: Word Vomit with answer
-        int question2 = JOptionPane.showConfirmDialog(null, "\"The weather a today was quite plesnt, with clar skies and a getle breeze.\n Everyone was out in the park, chidren playing feth and dogs running freely. \n It seemed like the perfect day  to relax and enjoy the outdoors without any worries." + //
+        int question2 = JOptionPane.showConfirmDialog(null, "\"The weather today was quite plesnt, with clar skies and a getle breeze.\n Everyone was out in the park, chidren playing feth and dogs running freely. \n It seemed like the perfect day  to relax and enjoy the outdoors without any worries." + //
                         "\"\n" + //
                         "\n" + //
                         "" , "Question 2", JOptionPane.YES_NO_CANCEL_OPTION);
@@ -51,7 +51,7 @@ public class quiz {
         int question4 = JOptionPane.showConfirmDialog(null, "did you have fun", "question4", JOptionPane.YES_NO_OPTION);
 
         if(question4 == 0){
-            JOptionPane.showMessageDialog(null, "Congratulations you have one the x games");
+            JOptionPane.showMessageDialog(null, "Congratulations you have won the x games");
 
         }
         else{
