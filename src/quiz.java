@@ -6,6 +6,10 @@ public class quiz {
 
         //asking for name
         String name = JOptionPane.showInputDialog(null, "what is your name");
+        while (name.length()<0){
+            JOptionPane.showMessageDialog(null,"Entering a name is required, please try again");
+            name = JOptionPane.showInputDialog(null, "what is your name");
+        }
     
         //Question 0: Specific password
         String password = JOptionPane.showInputDialog( "Please enter your password");
@@ -23,6 +27,7 @@ public class quiz {
         //Question 1:Image of triangle answer with text box. The question is find X. The answer for x will be the X button that closes the program.
         String question1 = JOptionPane.showInputDialog(null, " Find X for the equation: -144x + 864 +6x^2 = 0");
 
+
         if((question1 != null) && (question1.length() >= 0)){
             JOptionPane.showMessageDialog(null, "Wrong, try again");
             return true;
@@ -33,13 +38,15 @@ public class quiz {
                         "\"\n" + //
                         "\n" + //
                         "" , "Question 2", JOptionPane.YES_NO_CANCEL_OPTION);
-        if(question2 == 2){
+        if(question2 == JOptionPane.CANCEL_OPTION){
             JOptionPane.showMessageDialog(null,"damn you are actually somewhat smart");
         }
         else{
             JOptionPane.showMessageDialog(null, "Is your brain mushy try again");
             return true;
         }
+
+        //Question3: Riddle about your name
         String question3 = JOptionPane.showInputDialog(null, "Like a bad haircut from your childhood, this is given to you without your consent. What am I?");
         if(question3.equals(name)){
             JOptionPane.showMessageDialog(null, " YEAHHHH YOU COMPLETED THE QUIZZZ");
@@ -48,15 +55,17 @@ public class quiz {
             JOptionPane.showMessageDialog(null, "Is your brain mushy try again");
             return true;
         }
-        int question4 = JOptionPane.showConfirmDialog(null, "did you have fun", "question4", JOptionPane.YES_NO_OPTION);
 
+        //Question4: Did you have fun, definetly a real survey
+        int question4 = JOptionPane.showConfirmDialog(null, "did you have fun", "question4", JOptionPane.YES_NO_OPTION);
         if(question4 == 0){
             JOptionPane.showMessageDialog(null, "Congratulations you have won the x games");
-
         }
         else{
             JOptionPane.showMessageDialog(null, "Whoops there buddy you messed up try again!!");
+            return true;
         }
+
         //If they manage to complete the whole quiz, return false so they don't have to start again
         return false;
     }
