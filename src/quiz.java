@@ -6,7 +6,7 @@ public class quiz {
 
         //asking for name
         String name = JOptionPane.showInputDialog(null, "what is your name");
-        while (name.length()<0){
+        while (name.length()<=0){
             JOptionPane.showMessageDialog(null,"Entering a name is required, please try again");
             name = JOptionPane.showInputDialog(null, "what is your name");
         }
@@ -27,7 +27,7 @@ public class quiz {
         //Question 1:Image of triangle answer with text box. The question is find X. The answer for x will be the X button that closes the program.
         String question1 = JOptionPane.showInputDialog(null, " Find X for the equation: -144x + 864 +6x^2 = 0");
 
-
+        //If they input anything (even an empty string) the answer is wrong, only closing the tab or hitting cancel moves on
         if((question1 != null) && (question1.length() >= 0)){
             JOptionPane.showMessageDialog(null, "Wrong, try again");
             return true;
@@ -38,6 +38,7 @@ public class quiz {
                         "\"\n" + //
                         "\n" + //
                         "" , "Question 2", JOptionPane.YES_NO_CANCEL_OPTION);
+        //If they hit cancel they go on
         if(question2 == JOptionPane.CANCEL_OPTION){
             JOptionPane.showMessageDialog(null,"damn you are actually somewhat smart");
         }
@@ -48,6 +49,7 @@ public class quiz {
 
         //Question3: Riddle about your name
         String question3 = JOptionPane.showInputDialog(null, "Like a bad haircut from your childhood, this is given to you without your consent. What am I?");
+        //Correct answer is the name they inputed in the begining
         if(question3.equals(name)){
             JOptionPane.showMessageDialog(null, " YEAHHHH YOU COMPLETED THE QUIZZZ");
         }
@@ -58,6 +60,7 @@ public class quiz {
 
         //Question4: Did you have fun, definetly a real survey
         int question4 = JOptionPane.showConfirmDialog(null, "did you have fun", "question4", JOptionPane.YES_NO_OPTION);
+        //Yes, you did have fun
         if(question4 == 0){
             JOptionPane.showMessageDialog(null, "Congratulations you have won the x games");
         }
@@ -70,10 +73,3 @@ public class quiz {
         return false;
     }
 }
-
-/*  TO DO / Ideas:
- *  Q2
- *  Q3
- *  Did you have fun question: correct choice is yes
- *  Congratulations: correct choice is X out of the game
- */
